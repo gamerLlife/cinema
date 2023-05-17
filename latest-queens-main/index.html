@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo clickable" onclick="redirectToHomePage()">Queen's</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active clickable">Home</li>
+                    <li class="menu-list-item clickable">Movies</li>
+                    <li class="menu-list-item clickable">Series</li>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div> -->
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/0.jpg');">
+                <img class="featured-title" src="img/00.png" alt="">
+                <p class="featured-desc">In Marvel Studios’ “Guardians of the Galaxy Vol. 3” our beloved band of misfits are settling into life on Knowhere. But it isn’t long before their lives are upended by the echoes of Rocket’s turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket’s life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them. Watch it now in 3D!</p>
+                <button class="featured-button" onclick="redirectToMoviePage(this)" value="2">Watch</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Now Showing</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Guardians of the Galaxy Vol.3</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="1">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpg" alt="">
+                            <span class="movie-list-item-title">Ride On</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="2">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
+                            <span class="movie-list-item-title">John Wick Chapter 4</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="3">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title">The Super Mario Bros. Movie</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="4">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                            <span class="movie-list-item-title">Dungeons & Dragons: Honor Among Thieves</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="5">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                            <span class="movie-list-item-title">The Ghost Station</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="6">Book Now</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                            <span class="movie-list-item-title">Evil Dead Rise</span>
+                            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="7">Book Now</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Upcoming</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
+                            <span class="movie-list-item-title">Home For Rent</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="8">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/9.jpeg" alt="">
+                            <span class="movie-list-item-title">The Little Mermaid</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="9">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/10.png" alt="">
+                            <span class="movie-list-item-title">Godspeed</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="10">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
+                            <span class="movie-list-item-title">Spider Man: Across The Spider-Verser</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="11">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
+                            <span class="movie-list-item-title">The Roundup: No Way Out</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value=12">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/13.jpg" alt="">
+                            <span class="movie-list-item-title">The Flash</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="13">Movie Info</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/14.jpg" alt="">
+                            <span class="movie-list-item-title">Transformer: The Rise Of Beasts</span>
+                            <button class="movie-list-item-button" onclick="redirectToMovieInfoPage(this)" value="14">Movie Info</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

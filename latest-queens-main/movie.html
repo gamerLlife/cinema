@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Details Page</title>
+    <link rel="stylesheet" href="./movie-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo clickable" onclick="redirectToHomePage()">Queen's</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active clickable">Home</li>
+                    <li class="menu-list-item clickable">Movies</li>
+                    <li class="menu-list-item clickable">Series</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="poster">
+        <img src="img/1.jpg" alt="" id="">
+      </div>
+      <div class="info">
+        <div class="movie-title" id="Title">Guardians Of The Galaxy Vol.3</div>
+        <div class="movie-detail">
+          <div class="set">
+            <label>Release Date</label>
+            <span>4th May 2023</span>
+          </div>
+          <div class="set">
+            <label>Running time</label>
+            <span id="runningTime">2 Hrs 30 Min</span>
+          </div>
+          <div class="set">
+            <label>Genre</label>
+            <span>Action, Adventure</span>
+          </div>
+        </div>
+        <div class="movie-description">
+          In Marvel Studios’ “Guardians of the Galaxy Vol. 3” our beloved band of misfits are settling into life on Knowhere. But it isn’t long before their lives are upended by the echoes of Rocket’s turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket’s life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.
+        </div>
+        <div class="movie-cast">
+          <div class="header">Cast</div>
+          <div class="list">
+            <div class="cast">
+              <img src="img/a1.jpg" alt="" />
+              <label>Chris Pratt</label>
+            </div>
+            <div class="cast">
+              <img src="img/a2.jpg" alt="" />
+              <label>Zoe Saldana</label>
+            </div>
+            <div class="cast">
+              <img src="img/a3.jpg" alt="" />
+              <label>Dave Bautista</label>
+            </div>
+
+            <div class="cast">
+              <img src="img/a4.jpg" alt="" />
+              <label>Karen Gillan</label>
+            </div>
+
+            <div class="cast">
+              <img src="img/a5.jpg" alt="" />
+              <label>Pom Klementieff</label>
+            </div>
+
+            <div class="cast">
+              <img src="img/a6.jpg" alt="" />
+              <label>Vin Diesel</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        // Get the value from the query parameter
+        var query = new URLSearchParams(window.location.search);
+        var value = query.get('value');
+
+        // Use the value in Page 2
+        console.log(value);
+
+        // Change the image source based on the value
+        var imgElement = document.getElementById('img1');
+        imgElement.src = 'img/'+ value + '.jpeg';
+        imgElement.alt = value;
+
+        const spanElement = document.getElementById('runningTime');
+        if (value === '2') {
+        spanElement.textContent = '2 Hrs 5 Min';
+        } else if (value === '3') {
+        spanElement.textContent = '2 Hrs 50 Min';
+        } else if (value === '4') {
+        spanElement.textContent = '1 Hr 30 Min';
+        } else if (value === '5') {
+        spanElement.textContent = '2 Hrs 15 Min';
+        } else if (value === '6') {
+        spanElement.textContent = '1 Hr 20 Min';
+        } else if (value === '7') {
+        spanElement.textContent = '2 Hrs';
+        }
+        
+        const titleElement = document.getElementById('Title');
+        if (value === '2') {
+        titleElement.textContent = 'Ride On';
+        } else if (value === '3') {
+        titleElement.textContent = 'John Wick Chapter 4';
+        } else if (value === '4') {
+        titleElement.textContent = 'The Super Mario Bros. Movie';
+        } else if (value === '5') {
+        titleElement.textContent = 'Dungeons & Dragons: Honor Among Thieves';
+        } else if (value === '6') {
+        titleElement.textContent = 'The Ghost Station';
+        } else if (value === '7') {
+        titleElement.textContent = 'Evil Dead Rise';
+        }
+
+        const spanElement = document.getElementById('runningTime');
+        if (value === '2') {
+        spanElement.textContent = '2 Hrs 5 Min';
+        } else if (value === '3') {
+        spanElement.textContent = '2 Hrs 50 Min';
+        } else if (value === '4') {
+        spanElement.textContent = '1 Hr 30 Min';
+        } else if (value === '5') {
+        spanElement.textContent = '2 Hrs 15 Min';
+        } else if (value === '6') {
+        spanElement.textContent = '1 Hr 20 Min';
+        } else if (value === '7') {
+        spanElement.textContent = '2 Hrs';
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // go to home page
+        function redirectToHomePage() {
+        window.location.href = 'index.html';
+        }
+    </script>
+  </body>
+</html>

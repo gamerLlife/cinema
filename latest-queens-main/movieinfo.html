@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Details Page</title>
+    <link rel="stylesheet" href="./movie-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo clickable" onclick="redirectToHomePage()">Queen's</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active clickable">Home</li>
+                    <li class="menu-list-item clickable">Movies</li>
+                    <li class="menu-list-item clickable">Series</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="poster">
+        <img src="img/8.jpg" alt="" id="">
+      </div>
+      <div class="info">
+        <div class="movie-title" id="Title">Home For Rent</div>
+        <div class="movie-detail">
+          <div class="set">
+            <label>Release Date</label>
+            <span>1st Jun 2023</span>
+          </div>
+          <div class="set">
+            <label>Running time</label>
+            <span id="runningTime">2 Hrs</span>
+          </div>
+          <div class="set">
+            <label>Genre</label>
+            <span>Drama, Horror, Thriller</span>
+          </div>
+        </div>
+        <div class="movie-description">
+            Ning and Kawin are a couple with a seven-year-old daughter, Ing. The three decide to move to a condo and rent out their house to two tenants: Ratree, a retired doctor, and her forty-year-old daughter Nuch. After the new tenants have moved in, Ning notices that Kawin begins to exhibit unusual behaviour. He becomes secretive and often disappears from the condo at 4 a.m. Kawin even sports a triangle-shaped tattoo—the same design as Nuch’s. As her husband’s behaviour becomes increasingly disturbing, Ning realizes that her daughter is being preyed on by some unseen sinister force. She has to do everything to protect her daughter from this dark cult!
+        </div>
+        <div class="movie-cast">
+          <div class="header">Cast</div>
+          <div class="list">
+            <div class="cast">
+              <img src="img/h1.jpg" alt="" />
+              <label>Mew Nittha Jirayungyurn</label>
+            </div>
+            <div class="cast">
+              <img src="img/h2.jpg" alt="" />
+              <label>Weir Sukollawat Kanarot</label>
+            </div>
+            <div class="cast">
+              <img src="img/h3.jpg" alt="" />
+              <label>Tai Penpak Siriku</label>
+            </div>
+
+            <div class="cast">
+              <img src="" alt="" />
+              <label></label>
+            </div>
+
+            <div class="cast">
+              <img src="" alt="" />
+              <label></label>
+            </div>
+
+            <div class="cast">
+              <img src="" alt="" />
+              <label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        // Get the value from the query parameter
+        var query = new URLSearchParams(window.location.search);
+        var value = query.get('value');
+
+        // Use the value in Page 2
+        console.log(value);
+
+        // Change the image source based on the value
+        var imgElement = document.getElementById('img1');
+        imgElement.src = 'img/'+ value + '.jpeg';
+        imgElement.alt = value;
+
+        const spanElement = document.getElementById('runningTime');
+        if (value === '9') {
+        spanElement.textContent = '2 Hrs 15 Min';
+        } else if (value === '10') {
+        spanElement.textContent = '1 Hr 40 Min';
+        } else if (value === '11') {
+        spanElement.textContent = '2 Hrs';
+        } else if (value === '12') {
+        spanElement.textContent = '';
+        } else if (value === '13') {
+        spanElement.textContent = '';
+        } else if (value === '14') {
+        spanElement.textContent = '2 Hrs';
+        }
+        
+        const titleElement = document.getElementById('Title');
+        if (value === '9') {
+        titleElement.textContent = 'The Little Mermaid';
+        } else if (value === '10') {
+        titleElement.textContent = 'Godspeed';
+        } else if (value === '11') {
+        titleElement.textContent = 'Spider Man: Across The Spider-Verser';
+        } else if (value === '12') {
+        titleElement.textContent = 'The Roundup: No Way Out';
+        } else if (value === '13') {
+        titleElement.textContent = 'The Flash';
+        } else if (value === '14') {
+        titleElement.textContent = 'Transformer: The Rise Of Beasts';
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        // go to home page
+        function redirectToHomePage() {
+        window.location.href = 'index.html';
+        }
+    </script>
+  </body>
+</html>
