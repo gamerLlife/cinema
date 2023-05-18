@@ -6,13 +6,6 @@
     transition: all 0.35s linear;
 }
 
-body {
-    min-height: 100vh;
-    background-image: url("img/1.jpeg");
-    background-size: cover;
-}
-
-
 .navbar {
     width: 100%;
     height: 50px;
@@ -212,4 +205,16 @@ body {
     margin-top: 24px;
     color: #00ff00;
     font-weight: medium;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
 }

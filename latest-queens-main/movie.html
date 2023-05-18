@@ -47,7 +47,7 @@
         <div class="movie-detail">
           <div class="set">
             <label>Release Date</label>
-            <span>4th May 2023</span>
+            <span id="date">4th May 2023</span>
           </div>
           <div class="set">
             <label>Running time</label>
@@ -55,11 +55,12 @@
           </div>
           <div class="set">
             <label>Genre</label>
-            <span>Action, Adventure</span>
+            <span id="genre">Action, Adventure</span>
+            <button class="movie-list-item-button" onclick="redirectToMoviePage(this)" value="2">Book Now</button>
           </div>
         </div>
         <div class="movie-description">
-          In Marvel Studios’ “Guardians of the Galaxy Vol. 3” our beloved band of misfits are settling into life on Knowhere. But it isn’t long before their lives are upended by the echoes of Rocket’s turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket’s life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.
+          <span id="description">In Marvel Studios’ “Guardians of the Galaxy Vol. 3” our beloved band of misfits are settling into life on Knowhere. But it isn’t long before their lives are upended by the echoes of Rocket’s turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket’s life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.</span>
         </div>
         <div class="movie-cast">
           <div class="header">Cast</div>
@@ -108,21 +109,6 @@
         imgElement.src = 'img/'+ value + '.jpeg';
         imgElement.alt = value;
 
-        const spanElement = document.getElementById('runningTime');
-        if (value === '2') {
-        spanElement.textContent = '2 Hrs 5 Min';
-        } else if (value === '3') {
-        spanElement.textContent = '2 Hrs 50 Min';
-        } else if (value === '4') {
-        spanElement.textContent = '1 Hr 30 Min';
-        } else if (value === '5') {
-        spanElement.textContent = '2 Hrs 15 Min';
-        } else if (value === '6') {
-        spanElement.textContent = '1 Hr 20 Min';
-        } else if (value === '7') {
-        spanElement.textContent = '2 Hrs';
-        }
-        
         const titleElement = document.getElementById('Title');
         if (value === '2') {
         titleElement.textContent = 'Ride On';
@@ -153,15 +139,50 @@
         spanElement.textContent = '2 Hrs';
         }
 
+        const spanElement = document.getElementById('date');
+        if (value === '2') {
+        spanElement.textContent = '13th Apr 2023';
+        } else if (value === '3') {
+        spanElement.textContent = '23rd Mar 2023';
+        } else if (value === '4') {
+        spanElement.textContent = '20th Apr 2023';
+        } else if (value === '5') {
+        spanElement.textContent = '30th Mar 2023';
+        } else if (value === '6') {
+        spanElement.textContent = '4th May 2023';
+        } else if (value === '7') {
+        spanElement.textContent = '20th Apr 2023';
+        }
 
+        const spanElement = document.getElementById('genre');
+        if (value === '2') {
+        spanElement.textContent = 'Action, Comedy, Drama';
+        } else if (value === '3') {
+        spanElement.textContent = 'Action';
+        } else if (value === '4') {
+        spanElement.textContent = 'Animation';
+        } else if (value === '5') {
+        spanElement.textContent = 'Adventure, Fantasy';
+        } else if (value === '6') {
+        spanElement.textContent = 'Horror';
+        } else if (value === '7') {
+        spanElement.textContent = 'Fantasy, Horror, Thriller';
+        }
 
-
-
-
-
-
-
-
+        const spanElement = document.getElementById('description');
+        if (value === '2') {
+        spanElement.textContent = 'Lao Luo is washed-up stuntman who can barely make ends meet, let alone take care of his beloved stunt horse, Red Hare. He reluctantly seeks help from his estranged daughter and her lawyer boyfriend when notified that the horse may be auctioned off to cover his debts. Unexpectedly, the stuntman and the horse become overnight media sensations when their real-life fight with debt collectors goes viral. That earns the stuntman a second chance to choose between his movie career and his family.';
+        } else if (value === '3') {
+        spanElement.textContent = 'John Wick uncovers a path to defeat The High Table, but before he can earn his freedom, he must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.';
+        } else if (value === '4') {
+        spanElement.textContent = 'A Brooklyn plumber named Mario travels through the Mushroom Kingdom with a princess named Peach and an anthropomorphic mushroom named Toad to find Mario s brother, Luigi, and to save the world from a ruthless fire-breathing Koopa named Bowser.';
+        } else if (value === '5') {
+        spanElement.textContent = 'A charming thief and his gang of unlikely adventurers undertake an epic heist to retrieve a lost relic and stop a great evil from enslaving the world, but things go dangerously awry when they run afoul of the wrong people.';
+        } else if (value === '6') {
+        spanElement.textContent = 'Follows a young reporter and her partner as they investigate mysterious deaths and a case where her source of a suspicious accident was supposedly already dead at the time of their interview, they end up dealing with a terrifying truth.';
+        } else if (value === '7') {
+        spanElement.textContent = 'A road-weary Beth pays an overdue visit to her older sister Ellie, who is raising three kids on her own in a cramped L.A. apartment. The sisters` reunion is cut short by the discovery of a mysterious book deep in the bowels of Ellie`s building, giving rise to flesh-possessing demons, and thrusting Beth into a primal battle for survival as she is faced with the most nightmarish version of motherhood imaginable.';
+        }
 
         // go to home page
         function redirectToHomePage() {
