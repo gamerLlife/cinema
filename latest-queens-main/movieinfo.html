@@ -65,16 +65,16 @@
           <div class="header">Cast</div>
           <div class="list">
             <div class="cast">
-              <img src="img/h1.jpg" alt="" />
-              <label>Mew Nittha Jirayungyurn</label>
+              <img id="castImage1" src="img/h1.jpg" alt="" />
+              <label id="castName1">Mew Nittha Jirayungyurn</label>
             </div>
             <div class="cast">
-              <img src="img/h2.jpg" alt="" />
-              <label>Weir Sukollawat Kanarot</label>
+              <img id="castImage2" src="img/h2.jpg" alt="" />
+              <label id="castName2">Weir Sukollawat Kanarot</label>
             </div>
             <div class="cast">
-              <img src="img/h3.jpg" alt="" />
-              <label>Tai Penpak Siriku</label>
+              <img id="castImage3" src="img/h3.jpg" alt="" />
+              <label id="">Tai Penpak Siriku</label>
             </div>
 
             <div class="cast">
@@ -138,7 +138,7 @@
         spanElement.textContent = '2 Hrs';
         }
 
-        const spanElement = document.getElementById('date');
+        const datElement = document.getElementById('date');
         if (value === '9') {
         spanElement.textContent = '“25th May 2023';
         } else if (value === '10') {
@@ -153,7 +153,7 @@
         spanElement.textContent = '8th Jun 2023';
         }
 
-        const spanElement = document.getElementById('genre');
+        const genElement = document.getElementById('genre');
         if (value === '9') {
         spanElement.textContent = 'Action, Comedy, Drama';
         } else if (value === '10') {
@@ -168,7 +168,7 @@
         spanElement.textContent = 'Action, Adventure, Science Fiction';
         }
 
-        const spanElement = document.getElementById('description');
+        const desElement = document.getElementById('description');
         if (value === '9') {
         spanElement.textContent = '“The Little Mermaid” is the beloved story of Ariel, a beautiful and spirited young mermaid with a thirst for adventure. The youngest of King Triton’s daughters, and the most defiant, Ariel longs to find out more about the world beyond the sea, and while visiting the surface, falls for the dashing Prince Eric. While mermaids are forbidden to interact with humans, Ariel must follow her heart. She makes a deal with the evil sea witch, Ursula, which gives her a chance to experience life on land, but ultimately places her life – and her father’s crown – in jeopardy.';
         } else if (value === '10') {
@@ -181,6 +181,97 @@
         spanElement.textContent = 'Barry Allen, a.k.a. The Flash, travels back in time to prevent his mother`s murder, which traps him in an alternate reality without metahumans. He enlists the help of Batman and the Kryptonian castaway Supergirl from alternate realities to save this world from the restored General Zod and return to his universe.';
         } else if (value === '14') {
         spanElement.textContent = 'Returning to the action and spectacle that first captured moviegoers around the world 14 years ago with the original Transformers, this film will take audiences on a `90s globe-trotting adventure and introduce the Maximals, Predacons and Terrorcons to the existing battle on earth between Autobots and Decepticons.';
+        }
+
+        function updateCastDetails(value) {
+          switch (value) {
+            case '9':
+              document.getElementById('castImage1').src = 'img/i1.jpg';
+              document.getElementById('castName1').textContent = 'Halle Bailey';
+              document.getElementById('castImage2').src = 'img/i2.jpg';
+              document.getElementById('castName2').textContent = 'Daveed Diggs';
+              document.getElementById('castImage3').src = 'img/i3.jpg';
+              document.getElementById('castName3').textContent = 'Jacob Tremblay';
+              document.getElementById('castImage4').src = 'img/i4.jpg';
+              document.getElementById('castName4').textContent = 'Awkwafina';
+              document.getElementById('castImage5').src = 'img/i5.jpg';
+              document.getElementById('castName5').textContent = 'Jonah Hauer-King';
+              document.getElementById('castImage6').src = 'img/i6.jpg';
+              document.getElementById('castName6').textContent = 'Art Malik';
+              break;
+            case '10':
+              document.getElementById('castImage1').src = 'img/=j1.jpg';
+              document.getElementById('castName1').textContent = 'Qiao Shan';
+              document.getElementById('castImage2').src = 'img/j2.jpg';
+              document.getElementById('castName2').textContent = 'Fan Chengcheng';
+              document.getElementById('castImage3').src = 'img/j3.jpg';
+              document.getElementById('castName3').textContent = 'Ma Li';
+              document.getElementById('castImage4').src = 'img/j4.jpg';
+              document.getElementById('castName4').textContent = ' Zhang Jingyi';
+              document.getElementById('castImage5').src = '-';
+              document.getElementById('castName5').textContent = '-';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case 11':
+              document.getElementById('castImage1').src = 'img/k1.jpg';
+              document.getElementById('castName1').textContent = 'Oscar Isaac';
+              document.getElementById('castImage2').src = 'img/k2.jpg';
+              document.getElementById('castName2').textContent = 'Shameik Moore';
+              document.getElementById('castImage3').src = 'img/k3.jpg';
+              document.getElementById('castName3').textContent = 'Hailee Steinfeld';
+              document.getElementById('castImage4').src = 'img/k4.jpg';
+              document.getElementById('castName4').textContent = 'Jake Johnson';
+              document.getElementById('castImage5').src = 'img/k5.jpg';
+              document.getElementById('castName5').textContent = 'Issa Rae';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case '12':
+              document.getElementById('castImage1').src = 'img/l1.jpg';
+              document.getElementById('castName1').textContent = 'Ma Dong-seok';
+              document.getElementById('castImage2').src = 'img/l2.jpg';
+              document.getElementById('castName2').textContent = 'Lee Joon-hyuk';
+              document.getElementById('castImage3').src = 'img/l3.jpg';
+              document.getElementById('castName3').textContent = 'Munetaka Aoki';
+              document.getElementById('castImage4').src = '-';
+              document.getElementById('castName4').textContent = '-';
+              document.getElementById('castImage5').src = '-';
+              document.getElementById('castName5').textContent = '-';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case '13':
+              document.getElementById('castImage1').src = 'img/m1.jpg';
+              document.getElementById('castName1').textContent = 'Ezra Miller';
+              document.getElementById('castImage2').src = 'img/m2.jpg';
+              document.getElementById('castName2').textContent = 'Ben Affleck';
+              document.getElementById('castImage3').src = 'img/m3.jpg';
+              document.getElementById('castName3').textContent = 'Michael Keaton';
+              document.getElementById('castImage4').src = 'img/m4.jpg';
+              document.getElementById('castName4').textContent = 'Sasha Calle';
+              document.getElementById('castImage5').src = 'img/m5.jpg';
+              document.getElementById('castName5').textContent = 'Kiersey Clemons';
+              document.getElementById('castImage6').src = 'img/m6.jpg';
+              document.getElementById('castName6').textContent = 'Maribel Verdú';
+              break;
+            case '14':
+              document.getElementById('castImage1').src = 'img/n1.jpg';
+              document.getElementById('castName1').textContent = 'Anthony Ramos';
+              document.getElementById('castImage2').src = 'img/n2.jpg';
+              document.getElementById('castName2').textContent = 'Dominique Fishback';
+              document.getElementById('castImage3').src = 'img/n3.jpg';
+              document.getElementById('castName3').textContent = 'Tobe Nwigwe';
+              document.getElementById('castImage4').src = 'img/n4.jpg';
+              document.getElementById('castName4').textContent = 'Peter Cullen';
+              document.getElementById('castImage5').src = 'img/n5.jpg';
+              document.getElementById('castName5').textContent = 'Ron Perlman';
+              document.getElementById('castImage6').src = 'img/n6.jpg';
+              document.getElementById('castName6').textContent = 'Peter Dinklage';
+              break;
+            default:
+              break;
+          }
         }
 
         // go to home page

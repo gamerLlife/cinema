@@ -66,31 +66,31 @@
           <div class="header">Cast</div>
           <div class="list">
             <div class="cast">
-              <img src="img/a1.jpg" alt="" />
-              <label>Chris Pratt</label>
+              <img id="castImage1" src="img/a1.jpg" alt="" />
+              <label id="castName1">Chris Pratt</label>
             </div>
             <div class="cast">
-              <img src="img/a2.jpg" alt="" />
-              <label>Zoe Saldana</label>
+              <img id="castImage2" src="img/a2.jpg" alt="" />
+              <label id="castName2">Zoe Saldana</label>
             </div>
             <div class="cast">
-              <img src="img/a3.jpg" alt="" />
-              <label>Dave Bautista</label>
-            </div>
-
-            <div class="cast">
-              <img src="img/a4.jpg" alt="" />
-              <label>Karen Gillan</label>
+              <img id="castImage3" src="img/a3.jpg" alt="" />
+              <label id="castImage3">Dave Bautista</label>
             </div>
 
             <div class="cast">
-              <img src="img/a5.jpg" alt="" />
-              <label>Pom Klementieff</label>
+              <img id="castImage4" src="img/a4.jpg" alt="" />
+              <label id="castImage4">Karen Gillan</label>
             </div>
 
             <div class="cast">
-              <img src="img/a6.jpg" alt="" />
-              <label>Vin Diesel</label>
+              <img id="castImage5" src="img/a5.jpg" alt="" />
+              <label id="castName5">Pom Klementieff</label>
+            </div>
+
+            <div class="cast">
+              <img id="castImage6" src="img/a6.jpg" alt="" />
+              <label id="castName6">Vin Diesel</label>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@
         // Get the value from the query parameter
         var query = new URLSearchParams(window.location.search);
         var value = query.get('value');
-
+        updateCastDetails(value);
         // Use the value in Page 2
         console.log(value);
 
@@ -139,7 +139,7 @@
         spanElement.textContent = '2 Hrs';
         }
 
-        const spanElement = document.getElementById('date');
+        const datElement = document.getElementById('date');
         if (value === '2') {
         spanElement.textContent = '13th Apr 2023';
         } else if (value === '3') {
@@ -154,7 +154,7 @@
         spanElement.textContent = '20th Apr 2023';
         }
 
-        const spanElement = document.getElementById('genre');
+        const genElement = document.getElementById('genre');
         if (value === '2') {
         spanElement.textContent = 'Action, Comedy, Drama';
         } else if (value === '3') {
@@ -169,7 +169,7 @@
         spanElement.textContent = 'Fantasy, Horror, Thriller';
         }
 
-        const spanElement = document.getElementById('description');
+        const desElement = document.getElementById('description');
         if (value === '2') {
         spanElement.textContent = 'Lao Luo is washed-up stuntman who can barely make ends meet, let alone take care of his beloved stunt horse, Red Hare. He reluctantly seeks help from his estranged daughter and her lawyer boyfriend when notified that the horse may be auctioned off to cover his debts. Unexpectedly, the stuntman and the horse become overnight media sensations when their real-life fight with debt collectors goes viral. That earns the stuntman a second chance to choose between his movie career and his family.';
         } else if (value === '3') {
@@ -182,6 +182,97 @@
         spanElement.textContent = 'Follows a young reporter and her partner as they investigate mysterious deaths and a case where her source of a suspicious accident was supposedly already dead at the time of their interview, they end up dealing with a terrifying truth.';
         } else if (value === '7') {
         spanElement.textContent = 'A road-weary Beth pays an overdue visit to her older sister Ellie, who is raising three kids on her own in a cramped L.A. apartment. The sisters` reunion is cut short by the discovery of a mysterious book deep in the bowels of Ellie`s building, giving rise to flesh-possessing demons, and thrusting Beth into a primal battle for survival as she is faced with the most nightmarish version of motherhood imaginable.';
+        }
+
+        function updateCastDetails(value) {
+          switch (value) {
+            case '2':
+              document.getElementById('castImage1').src = 'img/b1.jpg';
+              document.getElementById('castName1').textContent = 'Jackie Chan';
+              document.getElementById('castImage2').src = 'img/b2.jpg';
+              document.getElementById('castName2').textContent = 'Liu Haocun';
+              document.getElementById('castImage3').src = 'img/b3.jpg';
+              document.getElementById('castName3').textContent = 'Kevin Guo';
+              document.getElementById('castImage4').src = '-';
+              document.getElementById('castName4').textContent = '-';
+              document.getElementById('castImage5').src = '-';
+              document.getElementById('castName5').textContent = '-';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case '3':
+              document.getElementById('castImage1').src = 'img/c1.jpg';
+              document.getElementById('castName1').textContent = 'Keanu Reeves';
+              document.getElementById('castImage2').src = 'img/c2.jpg';
+              document.getElementById('castName2').textContent = 'Donnie Yen';
+              document.getElementById('castImage3').src = 'img/c3.jpg';
+              document.getElementById('castName3').textContent = 'Bill Skarsgård';
+              document.getElementById('castImage4').src = 'img/c4.jpg';
+              document.getElementById('castName4').textContent = 'Laurence Fishburne';
+              document.getElementById('castImage5').src = 'img/c5.jpg';
+              document.getElementById('castName5').textContent = 'Hiroyuki Sanada';
+              document.getElementById('castImage6').src = 'img/c6.jpg';
+              document.getElementById('castName6').textContent = 'Shamier Anderson';
+              break;
+            case '4':
+              document.getElementById('castImage1').src = 'img/a1.jpg';
+              document.getElementById('castName1').textContent = 'Chris Pratt';
+              document.getElementById('castImage2').src = 'img/d2.jpg';
+              document.getElementById('castName2').textContent = 'Anya Taylor-Joy';
+              document.getElementById('castImage3').src = 'img/d3.jpg';
+              document.getElementById('castName3').textContent = 'Charlie Day';
+              document.getElementById('castImage4').src = 'img/d4.jpg';
+              document.getElementById('castName4').textContent = 'Jack Black';
+              document.getElementById('castImage5').src = 'img/d5.jpg';
+              document.getElementById('castName5').textContent = 'Keegan-Michael Key';
+              document.getElementById('castImage6').src = 'img/d6.jpg';
+              document.getElementById('castName6').textContent = 'Seth Rogen';
+              break;
+            case '5':
+              document.getElementById('castImage1').src = 'img/e1.jpg';
+              document.getElementById('castName1').textContent = 'Regé-Jean Page';
+              document.getElementById('castImage2').src = 'img/e2.jpg';
+              document.getElementById('castName2').textContent = ' Chris Pine';
+              document.getElementById('castImage3').src = 'img/e3.jpg';
+              document.getElementById('castName3').textContent = 'Hugh Grant';
+              document.getElementById('castImage4').src = 'img/e4.jpg';
+              document.getElementById('castName4').textContent = 'Michelle Rodriguez';
+              document.getElementById('castImage5').src = 'img/e5.jpg';
+              document.getElementById('castName5').textContent = 'Sophia Lillis';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case '6':
+              document.getElementById('castImage1').src = 'img/f1.jpg';
+              document.getElementById('castName1').textContent = 'Kim Bo Ra';
+              document.getElementById('castImage2').src = 'img/f2.jpg';
+              document.getElementById('castName2').textContent = 'Kim Jae Hyun';
+              document.getElementById('castImage3').src = 'img/f3.jpg';
+              document.getElementById('castName3').textContent = 'Shin So Yool';
+              document.getElementById('castImage4').src = '-';
+              document.getElementById('castName4').textContent = '-';
+              document.getElementById('castImage5').src = '-';
+              document.getElementById('castName5').textContent = '-';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            case '7':
+              document.getElementById('castImage1').src = 'img/g1.jpg';
+              document.getElementById('castName1').textContent = 'Alyssa Sutherland';
+              document.getElementById('castImage2').src = 'img/g2.jpg';
+              document.getElementById('castName2').textContent = 'Lily Sullivan';
+              document.getElementById('castImage3').src = 'img/g3.jpg';
+              document.getElementById('castName3').textContent = 'Gabrielle Echols';
+              document.getElementById('castImage4').src = 'img/g4.jpg';
+              document.getElementById('castName4').textContent = 'Morgan Davies';
+              document.getElementById('castImage5').src = '-';
+              document.getElementById('castName5').textContent = '-';
+              document.getElementById('castImage6').src = '-';
+              document.getElementById('castName6').textContent = '-';
+              break;
+            default:
+              break;
+          }
         }
 
         // go to home page

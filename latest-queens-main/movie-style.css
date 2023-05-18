@@ -98,7 +98,7 @@
   }
 
 .container {
-    min-height: 100vh;
+    
     display: grid;
     grid-template-columns: 480px 1fr;
     grid-gap: 32px;

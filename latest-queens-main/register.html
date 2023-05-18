@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register-style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo clickable" onclick="redirectToHomePage()">Queen's</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active clickable">Home</li>
+                    <li class="menu-list-item clickable">Movies</li>
+                    <li class="menu-list-item clickable">Series</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center">Sign up for a new account</h4>
+                <div class="row">
+                    <div class="col-md-8 offset-2">
+                        <form action="#" method="post">
+                            <div class="text-danger"></div>
+
+                            <div class="form-group">
+                                <label for="FullName" class="control-label">Full Name</label>
+                                <input type="text" id="FullName" class="form-control" />
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="EmailAddress" class="control-label">Email Address</label>
+                                <input type="email" id="EmailAddress" class="form-control" />
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password" class="control-label">Password</label>
+                                <input type="password" id="Password" class="form-control" />
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="ConfirmPassword" class="control-label">Confirm Password</label>
+                                <input type="password" id="ConfirmPassword" class="form-control" />
+                                <span class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
+                                <a class="btn btn-outline-secondary" href="#" onclick="redirectToHomePage()">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
